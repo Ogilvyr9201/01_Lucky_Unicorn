@@ -20,10 +20,25 @@ def yes_no(question):
 
 
 def instructions():
-    print("**** How to Play ****")
+    statement_generator("How To Play", "|", "=")
     print()
-    print("In this game the aim is to get as much money as you can! ")
-    print("")
+    print("Chose a starting amount between 1 and 10.")
+    print()
+    print("Press <enter> to play.")
+    print("You will either get Donkey, horse, Zebra, or Unicorn")
+    print()
+    print("The game costs $1 to play each Round")
+    print("depending on what you get you can either "
+          "win or lose some money")
+    print()
+    print("Each Token is worth")
+    print("Unicorn: $4")
+    print("Horse: $-0.5")
+    print("Zebra: $-0.5")
+    print("Donkey: $-1")
+    print()
+    print("You can quit any time by typing 'xxx'")
+    print()
     return""
 
 
@@ -65,12 +80,16 @@ def statement_generator(statement, side_deco, top_bottom_deco):
 # Title
 
 statement_generator("Welcome to the lucky Unicorn Game", "|", "=")
+print()
+
 # Ask if the user has played before
 played_before = yes_no("Have you played this game before? ")
 
 if played_before == "no":
+    print()
     instructions()
 
+statement_generator("Lets Play!", "$", "-")
 print()
 
 # Ask how much the user how much they wamt to play with

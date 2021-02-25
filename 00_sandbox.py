@@ -3,10 +3,10 @@ sides = "$" * 3
 
 hello = "{} {} {}".format(sides , greeting, sides)
 
-top_bottom = "-"  * len(greeting) * 2
+top_bottom = "-"  * len(hello)
 
 print(hello)
 
 print(top_bottom)
-print("{}  {}  {}".format(sides , greeting, sides))
+print(hello)
 print(top_bottom)

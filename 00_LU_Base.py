@@ -47,9 +47,24 @@ def num_check(question, low, high):
         except ValueError:
             print(error)
 
+def statement_generator(statement, side_deco, top_bottom_deco):
+
+    sides = side_deco * 3
+
+    statement = "{} {} {}".format(sides, statement, sides)
+
+    top_bottom = top_bottom_deco * len(statement)
+
+    print(top_bottom)
+    print(statement)
+    print(top_bottom)
+
+    return ""
 
 # Main routines
+# Title
 
+statement_generator("Welcome to the lucky Unicorn Game", "|", "=")
 # Ask if the user has played before
 played_before = yes_no("Have you played this game before? ")
 

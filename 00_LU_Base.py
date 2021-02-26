@@ -62,6 +62,7 @@ def num_check(question, low, high):
         except ValueError:
             print(error)
 
+
 def statement_generator(statement, side_deco, top_bottom_deco):
 
     sides = side_deco * 3

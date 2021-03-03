@@ -3,7 +3,7 @@ import random
 
 # Functions
 
-
+# Defines yes no questions
 def yes_no(question):
     valid = False
     while not valid:
@@ -22,10 +22,11 @@ def yes_no(question):
             print()
 
 
+# Defines the instructions
 def instructions():
     statement_generator("How To Play", "|", "=")
     print()
-    print("Chose a starting amount between 1 and 100.")
+    print("Chose a starting amount between 1 and 10.")
     print()
     print("Press <enter> to play.")
     print("You will either get Donkey, horse, Zebra, or Unicorn")
@@ -35,16 +36,17 @@ def instructions():
           "win or lose some money")
     print()
     print("Each Token is worth")
-    print("Unicorn: $4")
-    print("Horse: $-0.5")
-    print("Zebra: $-0.5")
-    print("Donkey: $-1")
+    print("Unicorn: $4.00")
+    print("Horse: $-0.50")
+    print("Zebra: $-0.50")
+    print("Donkey: $-1.00")
     print()
     print("You can quit any time by typing 'xxx'")
     print()
     return ""
 
 
+# Defines the umber checker
 def num_check(question, low, high):
     error = "Please enter a whole number between 1 and 10\n"
 
@@ -66,6 +68,7 @@ def num_check(question, low, high):
             print(error)
 
 
+# Defines Decoration
 def statement_generator(statement, side_deco, top_bottom_deco):
     sides = side_deco * 3
 
@@ -98,7 +101,7 @@ statement_generator("Lets Play!", "$", "-")
 print()
 
 # Ask how much the user how much they want to play with
-how_much = num_check("How much would you like to play with? ", 0, 100)
+how_much = num_check("How much would you like to play with? ", 0, 10)
 
 balance = how_much
 
@@ -109,7 +112,6 @@ while play_again == "":
 
     # increase number of rounds played
     rounds_played += 1
-    balance -= 1
 
     # print round number
     print()
